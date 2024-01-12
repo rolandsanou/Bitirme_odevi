@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Movie Recommendation</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Movie Recommendation</h1>
+        <div class="input-container">
+            <input type="text" id="movieInput" placeholder="Enter a movie name">
+            <input type="number" id="numRecommendations" placeholder="Number of recommendations">
+            <button onclick="getRecommendations()">Recommend</button>
+        </div>
+        <div id="firstRecommendation" class="hidden"
+             style="align-items: center;display: flex; justify-content: center; text-align: center; margin-top: 20px">
+        </div>
+        <div id="recommendations" class="hidden">
+            <h2>As recommendations we have:</h2>
+            <div id="recommendationList" class="card-container"></div>
+        </div>
+        <div class="loader-container" id="loaderContainer">
+            <div class="loader"></div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
